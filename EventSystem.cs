@@ -7,7 +7,7 @@ using Unity.Jobs;
 
 public abstract partial class EventSystem<T> : SystemBase where T : unmanaged
 {
-    // Debug settings that might be usefull in buillds
+    // Debug settings that might be useful in builds
     static readonly bool SuppressEventErrors = UnityEngine.Application.isEditor == false;
     static readonly bool TrackEvents = UnityEngine.Application.isEditor;
 
@@ -34,7 +34,7 @@ public abstract partial class EventSystem<T> : SystemBase where T : unmanaged
             if ((Index - StartIndex) >= Slots)
             {
 #if UNITY_EDITOR
-                throw new Exception("Used all slots in EventlSlot");
+                throw new Exception("Used all slots in EventSlots");
 #else
                 return;
 #endif
